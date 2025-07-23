@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adoptable Pets</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>🐾 PetPost – Adopt a Friend!</h1>
+    <a class="button" href="/upload">+ Add New Pet</a>
+  </header>
+
+  <main class="pets-container">
+    <% pets.forEach(pet => { %>
+      <div class="pet-card">
+        <img src="<%= pet.imageUrl %>" alt="<%= pet.name %>">
+        <div class="pet-info">
+          <h2><%= pet.name %></h2>
+          <p><strong>Breed:</strong> <%= pet.breed %></p>
+          <p><strong>Age:</strong> <%= pet.age %></p>
+        </div>
+      </div>
+    <% }) %>
+  </main>
+</body>
+</html>
